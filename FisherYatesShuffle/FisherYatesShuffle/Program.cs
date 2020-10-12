@@ -6,7 +6,7 @@ namespace FisherYatesShuffle
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Shuffle shuffle = new Shuffle();
         }
     }
 }
