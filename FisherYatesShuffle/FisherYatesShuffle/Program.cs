@@ -10,7 +10,7 @@ namespace FisherYatesShuffle
             string DataFile = "data.txt";
             char [] stringOfCharacters = {'A','B','C'}; //default test vals
 
-            if (File.Exists(DataFile))
+            if (File.Exists(DataFile)) //checks to see if file exists, then makes char array
             {
                 stringOfCharacters = File.ReadAllText(DataFile).ToCharArray();
             }
