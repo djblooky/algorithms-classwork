@@ -6,22 +6,16 @@ namespace FisherYatesShuffle
     {
         private static Random rand = new Random();
 
-        public static void DoShuffle(this object[] objects)
+        public static void DoShuffle(this char[] objects)
         {
             for (int i = objects.Length - 1; i > 0; i--)
             {
-                Swap(objects, i, GetRandomNumber(i));
+                int j = GetRandomNumberBetweenZeroAnd(i);
+                objects.SwapValuesAtIndices(i, j);
             }
         }
 
-        private static void Swap(object[] objects, int i, int j)  //swap i and j
-        {
-            object temp = objects[i];
-            objects[i] = objects[j];
-            objects[j] = temp;
-        }
-
-        private static int GetRandomNumber(int i)
+        private static int GetRandomNumberBetweenZeroAnd(int i)
         {
             return rand.Next(i + 1);
         }

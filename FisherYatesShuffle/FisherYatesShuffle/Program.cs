@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace FisherYatesShuffle
 {
@@ -6,14 +7,19 @@ namespace FisherYatesShuffle
     {
         static void Main(string[] args)
         {
-            //create example array
-            string[] letters = { "B", "A", "C" };
+            string DataFile = "data.txt";
+            char [] stringOfCharacters = {'A','B','C'}; //default test vals
 
-            Shuffle.DoShuffle(letters); //call shuffle
+            if (File.Exists(DataFile))
+            {
+                stringOfCharacters = File.ReadAllText(DataFile).ToCharArray();
+            }
+
+            Shuffle.DoShuffle(stringOfCharacters); //call shuffle
 
             //display shuffled results
-            foreach(string letter in letters)
-                Console.Write(letter + " ");
+            foreach(char letter in stringOfCharacters)
+                Console.Write(letter);
 
             Console.ReadLine();
         }
