@@ -8,4 +8,5 @@ I learned how to write and interpret Big-O notation and how to consider Constant
 ## Assignment 2: Fisher-Yates Shuffle
 I researched the history of the Fisher-Yates Shuffle and wrote my own example using the algorithm.
 
-## Assignment 3: 
+## Assignment 3: Data Structures
+TBD
