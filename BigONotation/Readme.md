@@ -1,6 +1,6 @@
 # Big-O Notation Examples
 
-In the file (big-o.cs)[big-o.cs], I have demonstrated the concepts of three notations: Constant, Linear, and Quadratic.
+In the file [big-o.cs](big-o.cs), I have demonstrated the concepts of three notations: Constant, Linear, and Quadratic.
 
 ## Constant Notation - O(1)
 From lines 3-6, the function PrintNumber(int number) demonstrates that constant notation represents a process with only one step. It will still only have one step no matter the size of the argument.
