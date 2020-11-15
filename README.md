@@ -9,4 +9,4 @@ I learned how to write and interpret Big-O notation and how to consider Constant
 I researched the history of the Fisher-Yates Shuffle and wrote my own example using the algorithm.
 
 ## Assignment 3: Data Structures
-TBD
+I demonstrated the differences between four data structures: Arrays, Maps, Stacks, and Queues.
