@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructures
 {
-    class Array
+    public class Array
     {
         private object[] array;
 
