@@ -6,5 +6,11 @@ namespace DataStructures
 {
     class Array
     {
+        private object[] array;
+
+        public Array(object[] array)
+        {
+            this.array = array;
+        }
     }
 }
