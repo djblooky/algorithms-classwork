@@ -4,7 +4,13 @@ using System.Text;
 
 namespace DataStructures
 {
-    class Queue
+    public class Queue
     {
+        Queue<object> queue;
+
+        public Queue(object[] array)
+        {
+           
+        }
     }
 }

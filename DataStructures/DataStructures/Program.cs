@@ -12,6 +12,8 @@ namespace DataStructures
 
             Array arrayStructure = new Array(data); //store the data in an array
 
+            Queue queueStructure = new Queue(data);
+
 
         }
     }
