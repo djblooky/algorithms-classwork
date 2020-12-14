@@ -44,9 +44,9 @@ namespace Sorting
             }
         }
 
-        private void Select(int selection)
+        private void Select(int input)
         {
-            switch (selection)
+            switch (input)
             {
                 case 1:
                     sortData = Bubble.Sort(sortData);
@@ -55,6 +55,7 @@ namespace Sorting
                     sortData = Insertion.Sort(sortData);
                     break;
                 case 3:
+                    sortData = Selection.Sort(sortData);
                     break;
                 case 4:
                     break;
@@ -63,6 +64,7 @@ namespace Sorting
                 case 6:
                     break;
                 default:
+                    Console.WriteLine("Wrong input");
                     break;
             }
 
