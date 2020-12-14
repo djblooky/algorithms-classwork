@@ -8,21 +8,22 @@ namespace Sorting
     {
         private bool playing = true;
         private string DataFile = "scores.txt";
-        private int[] originalScores = { 1, 2, 3 }; //default test vals
-        private int[] sortedScores;
+        private int[] sortData;
+        private int[] originalData;
 
         private void ReadDataFile()
         {
             if (File.Exists(DataFile)) //checks to see if file exists, then makes char array
             {
                 string dataString = File.ReadAllText(DataFile);
-                originalScores = dataString.Split('\n').Select(int.Parse).ToArray();
+                originalData = dataString.Split('\n').Select(int.Parse).ToArray();
             }
         }
 
         public SortingDemo()
         {
             ReadDataFile();
+            sortData = (int[])originalData.Clone();
             DisplayMenu();
         }
 
@@ -48,9 +49,10 @@ namespace Sorting
             switch (selection)
             {
                 case 1:
-                    sortedScores = Bubble.Sort(originalScores);
+                    sortData = Bubble.Sort(sortData);
                     break;
                 case 2:
+                    sortData = Insertion.Sort(sortData);
                     break;
                 case 3:
                     break;
@@ -69,13 +71,13 @@ namespace Sorting
 
         private void PrintResults()
         {
-            Console.WriteLine("The original data set was: ");
-            foreach (var score in originalScores)
-                Console.WriteLine(score + ", ");
+            Console.WriteLine("\n\nThe original data set was:\n ");
+            foreach (var s in originalData)
+                Console.Write(s + " ");
 
-            Console.WriteLine("The sorted data set is: ");
-            foreach (var score in sortedScores)
-                Console.WriteLine(score + ", ");
+            Console.WriteLine("\n\nThe sorted data set is:\n ");
+            foreach (var score in sortData)
+                Console.Write(score + " ");
 
             Console.ReadKey();
         }
