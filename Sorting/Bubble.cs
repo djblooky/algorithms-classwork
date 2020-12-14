@@ -9,11 +9,25 @@ namespace Sorting
 
         public static int[] Sort(int[] data)
         {
-            int[] sortedArray = null;
+            bool sorted = false;
 
+            while (!sorted)
+            {
+                sorted = true;
+                for(int i = 0; i < data.Length - 1; i++)
+                {
+                    if (data[i] < data[i-1]) //if out of order
+                    {
+                        //swap the values
+                        var temp = data[i];
+                        data[i] = data[i - 1];
+                        data[i - 1] = temp;
+                        sorted = false;
+                    }
+                }
 
-
-            return sortedArray;
+            }
+            return data;
         }
 
     }

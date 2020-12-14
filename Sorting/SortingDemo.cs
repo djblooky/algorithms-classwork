@@ -39,7 +39,7 @@ namespace Sorting
                 Console.WriteLine("5. Quick Sort");
                 Console.WriteLine("6. Merge Sort");
 
-                Select(Convert.ToInt32(Console.ReadKey()));
+                Select(int.Parse(Console.ReadKey().KeyChar.ToString()));
             }
         }
 
@@ -47,7 +47,8 @@ namespace Sorting
         {
             switch (selection)
             {
-                case 1: sortedScores = Bubble.Sort(originalScores);
+                case 1:
+                    sortedScores = Bubble.Sort(originalScores);
                     break;
                 case 2:
                     break;
