@@ -58,6 +58,7 @@ namespace Sorting
                     sortData = Selection.Sort(sortData);
                     break;
                 case 4:
+                    sortData = Heap.Sort(sortData);
                     break;
                 case 5:
                     break;
