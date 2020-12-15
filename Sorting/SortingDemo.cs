@@ -61,6 +61,7 @@ namespace Sorting
                     sortData = Heap.Sort(sortData);
                     break;
                 case 5:
+                    sortData = Quick.Sort(sortData, 0, sortData.Length - 1);
                     break;
                 case 6:
                     break;
