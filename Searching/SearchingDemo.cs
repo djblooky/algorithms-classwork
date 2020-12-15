@@ -8,8 +8,8 @@ namespace Searching
     {
         private bool playing = true;
         private string DataFile = "scores.txt";
-        private int[] sortData;
         private int[] originalData;
+        object results;
 
         private void ReadDataFile()
         {
@@ -23,7 +23,6 @@ namespace Searching
         public SearchingDemo()
         {
             ReadDataFile();
-            sortData = (int[])originalData.Clone();
             DisplayMenu();
         }
 
@@ -45,9 +44,10 @@ namespace Searching
         {
             switch (input)
             {
-                case 1:
+                case 1: 
                     break;
                 case 2:
+                    results = Binary.Search(originalData, 5);
                     break;
                 case 3:
                     break;
@@ -61,13 +61,7 @@ namespace Searching
 
         private void PrintResults()
         {
-            Console.WriteLine("\n\nThe original data set was:\n ");
-            foreach (var s in originalData)
-                Console.Write(s + " ");
-
-            Console.WriteLine("\n\nThe sorted data set is:\n ");
-            foreach (var score in sortData)
-                Console.Write(score + " ");
+            Console.WriteLine("\n\nResults: " + results);
 
             Console.ReadKey();
         }

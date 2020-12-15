@@ -6,7 +6,7 @@ namespace Searching
 {
     public static class Interpolation
     {
-        public static void Search(int[] data)
+        public static void Search(int[] data, int key)
         {
 
         }

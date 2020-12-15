@@ -2,7 +2,7 @@
 {
     public static class Linear
     {
-        public static void Search(int[] data)
+        public static void Search(int[] data, int key)
         {
 
         }
