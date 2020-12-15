@@ -63,7 +63,7 @@ namespace Sorting
                 case 5:
                     sortData = Quick.Sort(sortData, 0, sortData.Length - 1);
                     break;
-                case 6:
+                case 6: sortData = Merge.Sort(sortData);
                     break;
                 default:
                     Console.WriteLine("Wrong input");
