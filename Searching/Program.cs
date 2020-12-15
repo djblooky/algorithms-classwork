@@ -6,7 +6,8 @@ namespace Searching
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SearchingDemo demo = new SearchingDemo();
+            Console.ReadKey();
         }
     }
 }
